@@ -25,9 +25,19 @@ const propTypes = {
   avatar_url: PropTypes.string.isRequired,
   bio: PropTypes.string,
   moreInfo: PropTypes.string,
+  showProfileImage: PropTypes.bool,
+  profileImage: PropTypes.string,
 };
 
-const AboutMe = ({ avatar_url, bio, moreInfo }) => {
+const defaultProps = {
+  showProfileImage: true,
+  profileImage: null,
+};
+
+const AboutMe = ({ avatar_url, bio, moreInfo, showProfileImage = true, profileImage = null }) => {
+  // Use custom image if provided, otherwise fall back to GitHub avatar
+  const imageSrc = profileImage || avatar_url;
+
   return (
     <Element name={"About"} id="about">
       <StyledAboutMe className="section">
@@ -42,15 +52,17 @@ const AboutMe = ({ avatar_url, bio, moreInfo }) => {
                 {moreInfo && <p>{moreInfo}</p>}
               </Container>
             </Col>
-            <Col className="d-none d-md-block text-center">
-              <img
-                src={avatar_url}
-                alt="GitHub Avatar"
-                loading="lazy"
-                className="mx-auto rounded-circle border border-primary-subtle"
-                style={{ width: "15rem", height: "15rem" }}
-              />
-            </Col>
+            {showProfileImage && (
+              <Col className="d-none d-md-block text-center">
+                <img
+                  src={imageSrc}
+                  alt="Profile"
+                  loading="lazy"
+                  className="mx-auto rounded-circle border border-primary-subtle"
+                  style={{ width: "15rem", height: "15rem", objectFit: "cover" }}
+                />
+              </Col>
+            )}
           </Row>
         </Container>
       </StyledAboutMe>
@@ -59,6 +71,7 @@ const AboutMe = ({ avatar_url, bio, moreInfo }) => {
 };
 
 AboutMe.propTypes = propTypes;
+AboutMe.defaultProps = defaultProps;
 // #endregion
 
 export default AboutMe;

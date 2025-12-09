@@ -8,7 +8,7 @@ import AboutMe from "../components/AboutMe";
 import Resume from "../components/Resume";
 import BackToTop from "../components/BackToTop";
 // Config
-import { moreInfo } from "../config";
+import { moreInfo, showProfileImage, profileImage } from "../config";
 // Utils
 import { updateTitle } from "../utils";
 
@@ -28,6 +28,8 @@ const Home = () => {
           avatar_url={userData.avatar_url}
           bio={userData.bio}
           moreInfo={moreInfo}
+          showProfileImage={showProfileImage}
+          profileImage={profileImage}
         />
         <Resume />
       </main>

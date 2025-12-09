@@ -11,6 +11,9 @@ import HeroDark from "./images/hero-dark.jpg";
 // Projects Images (add your images to the images directory and import below)
 import Logo from "./images/logo.svg";
 
+// Profile Image (add your image to src/images and uncomment the line below)
+// import ProfileImage from "./images/profile.jpg";
+
 /* START HERE
  **************************************************************
   Add your GitHub username (string - "YourUsername") below.
@@ -37,6 +40,16 @@ export { HeroDark as Dark };
 */
 export const moreInfo =
   "I'm pursuing my M.S. in Aerospace Engineering at UCF with a focus on Orbital Mechanics and GNC. I build simulations to visualize and understand spacecraft dynamics, from two-body problems to the circular restricted three-body problem.";
+
+/* Profile Image
+ **************************************************************
+  Toggle the profile image on/off, or use a custom image instead of GitHub avatar.
+  
+  showProfileImage: Set to false to hide the image entirely
+  profileImage: Set to your imported image to use a custom photo, or null to use GitHub avatar
+*/
+export const showProfileImage = false;
+export const profileImage = null; // Change to ProfileImage after uncommenting the import above
 
 /* Skills
  ************************************************************** 
@@ -109,5 +122,3 @@ export const projectCardImages = [
 
 // Footer icons theme (light or dark)
 export const footerTheme = "dark";
-
-
