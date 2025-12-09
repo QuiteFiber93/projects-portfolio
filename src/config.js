@@ -35,7 +35,7 @@ export { HeroDark as Dark };
   Add a second paragraph for the about me section.
 */
 export const moreInfo =
-  "I enjoy learning about technology and helping others use it to improve their lives and be more productive. I built this site with React, React Bootstrap, Redux, and the GitHub REST API.";
+  "I'm pursuing my M.S. in Aerospace Engineering at UCF with a focus on Orbital Mechanics and GNC. I build simulations to visualize and understand spacecraft dynamics, from two-body problems to the circular restricted three-body problem.";
 
 /* Skills
  ************************************************************** 
@@ -115,3 +115,5 @@ export const formspreeUrl = "https://formspree.io/f/YourEndpoint";
 
 // Footer icons theme (light or dark)
 export const footerTheme = "dark";
+
+

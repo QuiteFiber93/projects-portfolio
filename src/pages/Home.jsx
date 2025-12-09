@@ -3,17 +3,16 @@ import React from "react";
 import { useGetUsersQuery } from "../app/apiSlice";
 // Components
 import Hero from "../components/Hero";
+import Simulations from "../components/Simulations";
 import AboutMe from "../components/AboutMe";
-import Skills from "../components/Skills";
-import Projects from "../components/Projects";
+import Resume from "../components/Resume";
 import Contact from "../components/Contact";
 import BackToTop from "../components/BackToTop";
 // Config
-import { filteredProjects, moreInfo } from "../config";
+import { moreInfo } from "../config";
 // Utils
 import { updateTitle } from "../utils";
 
-// #region component
 const Home = () => {
   const { data: userData } = useGetUsersQuery();
 
@@ -25,19 +24,18 @@ const Home = () => {
     <>
       <Hero name={userData.name} />
       <main>
+        <Simulations />
         <AboutMe
           avatar_url={userData.avatar_url}
           bio={userData.bio}
           moreInfo={moreInfo}
         />
-        <Skills />
-        <Projects filteredProjects={filteredProjects} />
+        <Resume />
         <Contact />
       </main>
       <BackToTop />
     </>
   );
 };
-// #endregion
 
 export default Home;

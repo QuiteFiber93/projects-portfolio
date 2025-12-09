@@ -17,13 +17,12 @@ import ThemeToggle from "./ThemeToggle";
 const navLinks = {
   routes: [
     { id: "1R", name: "Home", route: "/" },
-    { id: "2R", name: "All Projects", route: "/All-Projects" },
   ],
   to: [
     { id: "1T", name: "Home", to: "Home" },
-    { id: "2T", name: "About Me", to: "About" },
-    { id: "3T", name: "Skills", to: "Skills" },
-    { id: "4T", name: "Projects", to: "Projects" },
+    { id: "2T", name: "Simulations", to: "Simulations" },
+    { id: "3T", name: "About", to: "About" },
+    { id: "4T", name: "Resume", to: "Resume" },
     { id: "5T", name: "Contact", to: "Contact" },
   ],
 };
