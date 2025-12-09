@@ -14,6 +14,8 @@ import { Link } from "react-scroll";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import SocialLinks from "./SocialLinks";
 
+import { name as configName } from "../config";
+
 // #region styled-components
 const spin = keyframes`
   from {
@@ -107,7 +109,7 @@ const Hero = ({ name }) => {
         <Row className="align-items-center text-center">
           <Col>
             <h1 className="mb-3 display-3 title">
-              {name === null ? "null" : name}
+              {configName || name}
             </h1>
             <div className="d-flex align-items-center justify-content-center">
               <SocialLinks />
