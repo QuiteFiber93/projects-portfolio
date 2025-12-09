@@ -89,7 +89,7 @@ export const skillData = [
   },
 ];
 
-// Resume link (string - "https://YourResumeUrl") - I am using CloudFront to share my resume (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
+// Resume link (string - "https://YourResumeUrl") - 
 export const resume = null;
 
 /* Projects
@@ -105,13 +105,6 @@ export const projectCardImages = [
     image: Logo,
   },
 ];
-
-/* Contact Info
- ************************************************************** 
-  Add your formspree endpoint below.
-  https://formspree.io/
-*/
-export const formspreeUrl = "https://formspree.io/f/YourEndpoint";
 
 // Footer icons theme (light or dark)
 export const footerTheme = "dark";

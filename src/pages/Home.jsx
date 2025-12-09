@@ -6,7 +6,6 @@ import Hero from "../components/Hero";
 import Simulations from "../components/Simulations";
 import AboutMe from "../components/AboutMe";
 import Resume from "../components/Resume";
-import Contact from "../components/Contact";
 import BackToTop from "../components/BackToTop";
 // Config
 import { moreInfo } from "../config";
@@ -31,7 +30,6 @@ const Home = () => {
           moreInfo={moreInfo}
         />
         <Resume />
-        <Contact />
       </main>
       <BackToTop />
     </>

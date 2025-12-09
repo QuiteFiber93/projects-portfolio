@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 // Icons
 import { Icon } from "@iconify/react";
 // Images
-import Logo from "../images/logo.svg";
+// import Logo from "../images/logo.svg";
 import { Light, Dark } from "../config";
 // Components
 import { useErrorBoundary } from "react-error-boundary";
@@ -114,11 +114,11 @@ const Hero = ({ name }) => {
             </div>
           </Col>
           <Col className="d-none d-md-block">
-            <img
+            {/* <img
               src={Logo}
               alt="React Logo"
               className="w-75 mx-auto hero-img"
-            />
+            /> */}
           </Col>
         </Row>
         <Row className="align-items-end down-container">
